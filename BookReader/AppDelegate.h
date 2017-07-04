@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class Store;
+@class PersistentStack;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

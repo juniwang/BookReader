@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "SourcesMgmt.h"
 
 @interface FirstViewController ()
 
@@ -17,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSMutableDictionary * mydict = [SourcesMgmt.instance getSources];
+    NSLog(@"My first book is %@", [[mydict objectForKey:@"Qidian"] toString]);
 }
 
 
