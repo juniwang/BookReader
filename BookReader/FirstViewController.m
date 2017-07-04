@@ -8,6 +8,8 @@
 
 #import "FirstViewController.h"
 #import "SourcesMgmt.h"
+#import <CoreData/CoreData.h>
+#import "PersistentStack.h"
 
 @interface FirstViewController ()
 
@@ -21,6 +23,32 @@
     
     NSMutableDictionary * mydict = [SourcesMgmt.instance getSources];
     NSLog(@"My first book is %@", [[mydict objectForKey:@"Qidian"] toString]);
+    
+    PersistentStack * stack = [[PersistentStack alloc] init];
+    NSManagedObjectContext * context = stack.managedObjectContext;
+    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Book" inManagedObjectContext:context];
+    NSError *error;
+
+//    NSManagedObject *newBook;
+//    newBook = [NSEntityDescription insertNewObjectForEntityForName:@"Book" inManagedObjectContext:context];
+//    [newBook setValue:@"Jiang ye" forKey:@"name"];
+//    [newBook setValue:@"Mao Ni" forKey:@"author"];
+//    [newBook setValue:[NSDate date] forKey:@"createdDate"];
+    
+//    [context save:&error];
+    
+    NSFetchRequest * request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDesc];
+    NSArray *objects = [context executeFetchRequest:request error:&error];
+    NSManagedObject *matches = nil;
+    
+    if ([objects count] == 0) {
+        NSLog(@"No matches");
+    }else{
+        matches = [objects objectAtIndex:0];
+        NSString* name =[matches valueForKey:@"name"];
+        NSLog(@"The first book is %@", name);
+    }
 }
 
 

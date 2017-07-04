@@ -19,7 +19,7 @@
 		A98C35FA1F0A29DE009F7367 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C35F91F0A29DE009F7367 /* MainTabBarViewController.m */; };
 		A98C35FD1F0A34AD009F7367 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C35FC1F0A34AD009F7367 /* ThirdViewController.m */; };
 		A98C36011F0A463F009F7367 /* BookSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C36001F0A463F009F7367 /* BookSource.m */; };
-		A98C36041F0B3382009F7367 /* books.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A98C36021F0B3382009F7367 /* books.xcdatamodeld */; };
+		A98C36041F0B3382009F7367 /* bookscd.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A98C36021F0B3382009F7367 /* bookscd.xcdatamodeld */; };
 		A98C36081F0B3E54009F7367 /* SourcesMgmt.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C36071F0B3E54009F7367 /* SourcesMgmt.m */; };
 		A98C36101F0B4D5D009F7367 /* PersistentStack.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C360F1F0B4D5D009F7367 /* PersistentStack.m */; };
 		A9B342E41F0B7A2D00B30B97 /* FetchedResultsControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B342E31F0B7A2D00B30B97 /* FetchedResultsControllerDataSource.m */; };
@@ -67,7 +67,7 @@
 		A98C35FC1F0A34AD009F7367 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		A98C35FF1F0A463F009F7367 /* BookSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookSource.h; sourceTree = "<group>"; };
 		A98C36001F0A463F009F7367 /* BookSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookSource.m; sourceTree = "<group>"; };
-		A98C36031F0B3382009F7367 /* books.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = books.xcdatamodel; sourceTree = "<group>"; };
+		A98C36031F0B3382009F7367 /* bookscd.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bookscd.xcdatamodel; sourceTree = "<group>"; };
 		A98C36061F0B3E54009F7367 /* SourcesMgmt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourcesMgmt.h; sourceTree = "<group>"; };
 		A98C36071F0B3E54009F7367 /* SourcesMgmt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourcesMgmt.m; sourceTree = "<group>"; };
 		A98C360E1F0B4D5D009F7367 /* PersistentStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistentStack.h; sourceTree = "<group>"; };
@@ -124,9 +124,6 @@
 		A91CAEAB1EE011F3001D1D28 /* BookReader */ = {
 			isa = PBXGroup;
 			children = (
-				A9B342E21F0B7A2D00B30B97 /* FetchedResultsControllerDataSource.h */,
-				A9B342E31F0B7A2D00B30B97 /* FetchedResultsControllerDataSource.m */,
-				A98C36021F0B3382009F7367 /* books.xcdatamodeld */,
 				A98C360A1F0B4CE7009F7367 /* CoreData */,
 				A98C36091F0B4CD5009F7367 /* Services */,
 				A98C35FE1F0A4602009F7367 /* Models */,
@@ -134,6 +131,8 @@
 				A91CAEB01EE011F3001D1D28 /* AppDelegate.m */,
 				A91CAEB21EE011F3001D1D28 /* FirstViewController.h */,
 				A91CAEB31EE011F3001D1D28 /* FirstViewController.m */,
+				A9B342E21F0B7A2D00B30B97 /* FetchedResultsControllerDataSource.h */,
+				A9B342E31F0B7A2D00B30B97 /* FetchedResultsControllerDataSource.m */,
 				A91CAEB51EE011F3001D1D28 /* SecondViewController.h */,
 				A91CAEB61EE011F3001D1D28 /* SecondViewController.m */,
 				A91CAEB81EE011F3001D1D28 /* Main.storyboard */,
@@ -196,6 +195,7 @@
 		A98C360A1F0B4CE7009F7367 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				A98C36021F0B3382009F7367 /* bookscd.xcdatamodeld */,
 				A98C360E1F0B4D5D009F7367 /* PersistentStack.h */,
 				A98C360F1F0B4D5D009F7367 /* PersistentStack.m */,
 			);
@@ -335,7 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A98C36041F0B3382009F7367 /* books.xcdatamodeld in Sources */,
+				A98C36041F0B3382009F7367 /* bookscd.xcdatamodeld in Sources */,
 				A91CAEB71EE011F3001D1D28 /* SecondViewController.m in Sources */,
 				A91CAEB11EE011F3001D1D28 /* AppDelegate.m in Sources */,
 				A98C36081F0B3E54009F7367 /* SourcesMgmt.m in Sources */,
@@ -606,13 +606,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A98C36021F0B3382009F7367 /* books.xcdatamodeld */ = {
+		A98C36021F0B3382009F7367 /* bookscd.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A98C36031F0B3382009F7367 /* books.xcdatamodel */,
+				A98C36031F0B3382009F7367 /* bookscd.xcdatamodel */,
 			);
-			currentVersion = A98C36031F0B3382009F7367 /* books.xcdatamodel */;
-			path = books.xcdatamodeld;
+			currentVersion = A98C36031F0B3382009F7367 /* bookscd.xcdatamodel */;
+			path = bookscd.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

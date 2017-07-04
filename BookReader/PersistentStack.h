@@ -17,4 +17,5 @@
 
 - (id)initWithStoreURL:(NSURL*)storeURL modelURL:(NSURL*)modelURL;
 
+
 @end

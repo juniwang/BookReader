@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="BookContent" representedClassName="BookContent" syncable="YES" codeGenerationType="class">
-        <attribute name="bookName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="sequenceNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Books" inverseName="contents" inverseEntity="Books" syncable="YES"/>
-    </entity>
-    <entity name="Books" representedClassName="Books" syncable="YES" codeGenerationType="class">
+    <entity name="Book" representedClassName="Book" syncable="YES" codeGenerationType="class">
         <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="currentChapter" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,8 +10,15 @@
         <attribute name="sourceUpdatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="contents" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="BookContent" inverseName="book" inverseEntity="BookContent" syncable="YES"/>
     </entity>
+    <entity name="BookContent" representedClassName="BookContent" syncable="YES" codeGenerationType="class">
+        <attribute name="bookName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sequenceNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="contents" inverseEntity="Book" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Books" positionX="-63" positionY="-18" width="128" height="163"/>
-        <element name="BookContent" positionX="160" positionY="27" width="128" height="118"/>
+        <element name="BookContent" positionX="160" positionY="27" width="128" height="120"/>
+        <element name="Book" positionX="-63" positionY="-18" width="128" height="165"/>
     </elements>
 </model>

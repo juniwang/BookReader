@@ -10,6 +10,11 @@
 
 @implementation PersistentStack
 
+- (id)init
+{
+    return [self initWithStoreURL:self.storeURL modelURL:self.modelURL];
+}
+
 - (id)initWithStoreURL:(NSURL*)storeURL modelURL:(NSURL*)modelURL
 {
     self = [super init];
@@ -19,6 +24,17 @@
         [self setupManagedObjectContext];
     }
     return self;
+}
+
+- (NSURL*)storeURL
+{
+    NSURL* documentsDirectory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:NULL];
+    return [documentsDirectory URLByAppendingPathComponent:@"db.sqlite"];
+}
+
+- (NSURL*)modelURL
+{
+    return [[NSBundle mainBundle] URLForResource:@"bookscd" withExtension:@"momd"];
 }
 
 - (void)setupManagedObjectContext
